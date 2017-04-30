@@ -1,0 +1,17 @@
+{
+  "name": "gulp4-run-sequence",
+  "version": "0.0.0",
+  "description": "Drop-in replacement for run-sequence for gulp 4",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/electric-eloquence/gulp4-run-sequence.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "dependencies": {
+    "gulp": "github:gulpjs/gulp#4.0"
+  }
+}
