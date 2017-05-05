@@ -1,7 +1,6 @@
 # Drop-in replacement for run-sequence for gulp 4
 
-This package aims to help allow gulp tasks coded in gulp 3 syntax to run in 
-gulp 4.
+This package aims to help gulp tasks coded in gulp 3 syntax to run in gulp 4.
 
 Usage:
 
