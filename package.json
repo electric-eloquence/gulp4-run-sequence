@@ -9,7 +9,7 @@
   },
   "license": "MIT",
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=0.10.0"
   },
   "devDependencies": {
     "gulp": "github:gulpjs/gulp#4.0"

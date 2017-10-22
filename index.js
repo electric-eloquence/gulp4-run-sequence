@@ -1,11 +1,11 @@
 'use strict';
 
-const gulp = require('gulp');
+var gulp = require('gulp');
 
 module.exports = function (tasks) {
-  let cb;
+  var cb;
 
-  const toRunArr = tasks.filter(task => {
+  var toRunArr = tasks.filter(function (task) {
     if (typeof task === 'string') {
       return true;
     }
@@ -19,7 +19,7 @@ module.exports = function (tasks) {
     else {
       return false;
     }
-  }).map(task => {
+  }).map(function (task) {
     if (typeof task === 'string') {
       return task;
     }
@@ -28,6 +28,7 @@ module.exports = function (tasks) {
     }
   });
 
-  const toRunFn = gulp.series.apply(null, toRunArr);
+  var toRunFn = gulp.series.apply(null, toRunArr);
+
   toRunFn(cb);
 };
