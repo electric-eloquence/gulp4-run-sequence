@@ -8,6 +8,10 @@
     "url": "git+https://github.com/electric-eloquence/gulp4-run-sequence.git"
   },
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/electric-eloquence/gulp4-run-sequence/issues"
+  },
+  "homepage": "https://github.com/electric-eloquence/gulp4-run-sequence#readme",
   "engines": {
     "node": ">=0.10.0"
   },
