@@ -4,7 +4,7 @@ This package aims to help gulp tasks coded in gulp 3 syntax run in gulp 4.
 
 ### Use
 
-```
+```javascript
 const runSequence = require('gulp4-run-sequence');
 ```
 
