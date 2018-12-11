@@ -14,3 +14,5 @@ for further documentation on usage.
 This package has been coded with best practices and future-proofing in mind. 
 Please report any bugs, issues, or suggestions at 
 https://github.com/electric-eloquence/gulp4-run-sequence/issues
+
+Also recommended: [gulp 3 with long-term support](https://github.com/electric-eloquence/gulp)
