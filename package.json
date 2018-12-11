@@ -7,15 +7,26 @@
     "type": "git",
     "url": "git+https://github.com/electric-eloquence/gulp4-run-sequence.git"
   },
+  "keywords": [
+    "gulp",
+    "gulp 3",
+    "gulp 4",
+    "long",
+    "long-term",
+    "long-term support",
+    "lts",
+    "run",
+    "run-sequence",
+    "sequence",
+    "support",
+    "term"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/electric-eloquence/gulp4-run-sequence/issues"
   },
   "homepage": "https://github.com/electric-eloquence/gulp4-run-sequence#readme",
-  "engines": {
-    "node": ">=0.10.0"
-  },
   "devDependencies": {
-    "gulp": "github:gulpjs/gulp#4.0"
+    "gulp": "^4.0.0"
   }
 }
