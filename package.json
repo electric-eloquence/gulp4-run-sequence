@@ -3,6 +3,14 @@
   "version": "0.1.2",
   "description": "Drop-in replacement for run-sequence for gulp 4",
   "main": "index.js",
+  "scripts": {
+    "lint": "eslint index.js && eslint test"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint && npm test"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/electric-eloquence/gulp4-run-sequence.git"
@@ -27,6 +35,10 @@
   },
   "homepage": "https://github.com/electric-eloquence/gulp4-run-sequence#readme",
   "devDependencies": {
-    "gulp": "^4.0.0"
+    "chai": "4.x",
+    "eslint": "5.x",
+    "gulp": "^4.0.0",
+    "husky": "^1.2.0",
+    "mocha": "5.x"
   }
 }
