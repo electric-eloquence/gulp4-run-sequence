@@ -2,10 +2,15 @@
 
 var gulp = require('gulp');
 
-module.exports = function (tasks) {
+module.exports = function () {
   var cb;
+  var argsArr = [];
 
-  var toRunArr = tasks.filter(function (task) {
+  for (var i = 0; i < arguments.length; i++) {
+    argsArr[i] = arguments[i];
+  }
+
+  var toRunArr = argsArr.filter(function (task) {
     if (typeof task === 'string') {
       return true;
     }
