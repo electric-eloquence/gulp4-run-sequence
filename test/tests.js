@@ -391,7 +391,7 @@ describe('gulp4-run-sequence', function () {
         }, timeout);
       });
     });
-    gulp.task('parallelPromises', function(cb) {
+    gulp.task('parallelPromises', function (cb) {
       runSequence(
         ['parallelPromise0', 'parallelPromise1'],
         cb
