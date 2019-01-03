@@ -290,8 +290,8 @@ describe('gulp4-run-sequence', function () {
   });
 
   it('should run stream tasks in parallel', function (done) {
-    var stop0;
-    var start1;
+    let stop0;
+    let start1;
 
     gulp.task('stream0', function () {
       return gulp.src(path.join(srcDir, 'foo.txt'))
@@ -332,11 +332,11 @@ describe('gulp4-run-sequence', function () {
   });
 
   it('should run promise tasks in series', function (done) {
-    var a = '';
-    var b = '0';
-    var c = '1';
-    var stop0;
-    var start1;
+    let a = '';
+    let b = '0';
+    let c = '1';
+    let stop0;
+    let start1;
 
     gulp.task('seriesPromise0', function () {
       return new Promise(function (resolve) {
@@ -372,8 +372,8 @@ describe('gulp4-run-sequence', function () {
   });
 
   it('should run promise tasks in parallel', function (done) {
-    var stop0;
-    var start1;
+    let stop0;
+    let start1;
 
     gulp.task('parallelPromise0', function () {
       return new Promise(function (resolve) {
