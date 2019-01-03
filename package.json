@@ -38,6 +38,7 @@
   "homepage": "https://github.com/electric-eloquence/gulp4-run-sequence#readme",
   "devDependencies": {
     "chai": "4.x",
+    "coveralls": "^3.0.2",
     "eslint": "5.x",
     "gulp": "^4.0.0",
     "husky": "^1.2.0",
