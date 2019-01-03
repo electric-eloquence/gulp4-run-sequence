@@ -4,6 +4,7 @@
   "description": "Drop-in replacement for run-sequence for gulp 4",
   "main": "index.js",
   "scripts": {
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "lint": "eslint index.js && eslint test",
     "test": "nyc mocha"
   },
