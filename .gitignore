@@ -1,4 +1,8 @@
+!/test/fixtures/src/
 .*.swp
 .DS_Store
+.coveralls.yml
+.nyc_output/
+/test/fixtures/*
 node_modules/
 package-lock.json
