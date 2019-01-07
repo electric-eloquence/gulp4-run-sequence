@@ -22,7 +22,7 @@ Also recommended: [gulp 3 with long-term support](https://github.com/electric-el
 [snyk-image]: https://snyk.io/test/github/electric-eloquence/gulp4-run-sequence/master/badge.svg
 [snyk-url]: https://snyk.io/test/github/electric-eloquence/gulp4-run-sequence/master
 
-[travis-image]: https://img.shields.io/travis/electric-eloquence/gulp4-run-sequence.svg
+[travis-image]: https://img.shields.io/travis/electric-eloquence/gulp4-run-sequence.svg?label=mac%20%26%20linux
 [travis-url]: https://travis-ci.org/electric-eloquence/gulp4-run-sequence
 
 [appveyor-image]: https://img.shields.io/appveyor/ci/e2tha-e/gulp4-run-sequence.svg?label=windows
