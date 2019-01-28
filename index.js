@@ -41,3 +41,4 @@ module.exports = runSequence.bind(null, null);
 module.exports.use = function (gulp) {
   return runSequence.bind(null, gulp);
 };
+module.exports.options = {};
