@@ -35,18 +35,18 @@ gulp.task('build', function (callback) {
 // but make sure they return a stream or promise, or handle the callback.
 // Example:
 
-gulp.task('boil-water', function() {
+gulp.task('boil-water', function () {
   // Return the stream from gulp.
   return gulp.src(water).pipe(...)...
 });
 
-gulp.task('boil-egg', function() {
+gulp.task('boil-egg', function () {
   return new Promise(function (resolve, reject) {
     // Make sure asynchronous tasks are resolved or rejected.
   });
 });
 
-gulp.task('peel-egg', function(callback) {
+gulp.task('peel-egg', function (callback) {
   fs.readFile('egg', function (err, data) {
     // Consume data...
     callback();
