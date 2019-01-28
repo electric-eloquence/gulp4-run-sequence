@@ -1,10 +1,9 @@
 'use strict';
 
-var gulp = require('gulp');
-
-module.exports = function () {
-  var cb;
+function runSequence(gulp_) {
   var argsArr = [];
+  var cb;
+  var gulp = gulp_ || require('gulp');
 
   for (var i = 0; i < arguments.length; i++) {
     argsArr[i] = arguments[i];
@@ -36,4 +35,9 @@ module.exports = function () {
   var toRunFn = gulp.series.apply(null, toRunArr);
 
   toRunFn(cb);
+}
+
+module.exports = runSequence.bind(null, null);
+module.exports.use = function (gulp) {
+  return runSequence.bind(null, gulp);
 };

@@ -403,4 +403,21 @@ describe('gulp4-run-sequence', function () {
       done();
     });
   });
+
+  it('should use an explicitly assigned gulp object', function () {
+    const cb = () => {};
+    const testArr = ['steepTea', 'boilEgg'];
+    const gulpMock = {
+      parallel: () => testArr.push('parallel'),
+      series: () => () => testArr.push('series')
+    };
+    const runSequenceUseTest = require('../index').use(gulpMock);
+
+    runSequenceUseTest(testArr, cb);
+
+    expect(testArr[0]).to.equal('steepTea');
+    expect(testArr[1]).to.equal('boilEgg');
+    expect(testArr[2]).to.equal('parallel');
+    expect(testArr[3]).to.equal('series');
+  });
 });
