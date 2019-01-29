@@ -37,7 +37,7 @@ gulp.task('build', function (callback) {
 
 gulp.task('boil-water', function () {
   // Return the stream from gulp.
-  return gulp.src(water).pipe(...)...
+  return gulp.src('water').pipe(...)...
 });
 
 gulp.task('boil-egg', function () {
