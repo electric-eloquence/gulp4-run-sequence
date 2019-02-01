@@ -80,7 +80,7 @@ gulp.task('supertask', function (callback) {
 The options in the gulp 3 version of run-sequence no longer apply. 
 
 `showErrorStackTrace` no longer applies because errors are handled entirely 
-within the gulp4 stack. A good command of streams, promises, and callback 
+within the gulp 4 stack. A good command of streams, promises, and callback 
 functions will deliver the desired amount of error verbosity.
 
 `ignoreUndefinedTasks` no longer applies because all falsey arguments will be 
