@@ -16,10 +16,10 @@ const runSequence = require('gulp4-run-sequence');
 const fs = require('fs');
 
 // This will run in this order:
-// * boil-water
-// * steep-tea and boil-egg in parallel
-// * peel-egg
-// * Finally call the callback function
+// * 'boil-water'
+// * 'steep-tea' and 'boil-egg' in parallel
+// * 'peel-egg'
+// * Finally, invoke the callback function.
 gulp.task('build', function (callback) {
   runSequence(
     'boil-water',
