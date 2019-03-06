@@ -42,7 +42,7 @@
     "eslint": "5.x",
     "gulp": "^4.0.0",
     "husky": "1.x",
-    "mocha": "5.x",
+    "mocha": "6.x",
     "nyc": "13.x"
   }
 }
