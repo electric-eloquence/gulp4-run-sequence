@@ -8,4 +8,3 @@
 /test/fixtures/*
 !/test/fixtures/src/
 node_modules/
-package-lock.json
