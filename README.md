@@ -33,7 +33,7 @@ gulp.task('build', function (callback) {
 
 // Configure boil-water, steep-tea, boil-egg, and peel-egg as you wish,
 // but make sure they return a stream or promise, or handle the callback.
-// Example:
+// Examples:
 
 gulp.task('boil-water', function () {
   // Return the stream from gulp.
