@@ -85,8 +85,9 @@ functions will deliver the desired amount of error verbosity.
 
 `ignoreUndefinedTasks` no longer applies because all falsey arguments will be 
 skipped without a warning. The logic follows the best practice of looking for 
-positives, rather than looking for a subset of the infinite set of negatives, in 
-order to warn that there's a negative, only to skip it or exit on it.
+positive matches, rather than looking for a subset of the infinite set of 
+negative matches, in order to warn that there's a negative match, only to skip 
+it or exit on it.
 
 ### Acknowledgements
 
