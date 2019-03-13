@@ -122,14 +122,14 @@ Now consider a procedure found in nearly every gulp implementation: a file read.
 It is not a good idea to run file reads concurrently on a single machine even if 
 it has many processor cores. You should assume the machine has a single disk 
 drive, and that the drive has a single read/write head. Even if those aren't the 
-case, you should assume there is only one open pathway on which the data can 
-travel from drive to memory.
+case, you should assume there is only one pathway open at a given time on which 
+the data can travel from drive to memory.
 
 Let's make a culinary analogy: Assume you need 2 liters of warm water evenly 
 mixed from a cold faucet and a hot faucet. However, the cold and hot faucets 
-are separated by 10 meters. Any rational person would mix the water 
-sequentially, filling a liter of cold, walking the 10 meters, and filling 
-another liter of hot.
+are 10 meters apart. Any rational person would mix the water sequentially, 
+filling a liter of cold water, walking the 10 meters, and filling another liter 
+of hot.
 
 Trying to make this water gathering appear concurrent by filling smaller 
 quantities of water at a time and walking more is called "thrashing" if applied 
