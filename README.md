@@ -108,9 +108,9 @@ processor cores.
 that they appear to be running at the same time. This can be accomplished by 
 rapidly switching between the processes on one processor core.
 
-"__Asynchrony__" refers to when a process occurs outside the main execution 
-flow, and the main execution might need a response. If it does, it must not 
-block other processes not dependent on the response while it waits.
+"__Asynchrony__" refers to when a process runs outside the main execution flow, 
+and the main execution might need a response. If it does, it must not block 
+other processes not dependent on the response while it waits.
 
 JavaScript, and Node.js in particular, are frequently referred to as being 
 "single-threaded". In recent years, this has become wholly untrue. If you are 
@@ -128,8 +128,8 @@ travel from drive to memory.
 Let's make a culinary analogy: Assume you need 2 liters of warm water evenly 
 mixed from a cold faucet and a hot faucet. However, the cold and hot faucets 
 are separated by 10 meters. Any rational person would mix the water 
-sequentially, filling a liter with cold, walking the 10 meters, and filling 
-another liter with hot.
+sequentially, filling a liter of cold, walking the 10 meters, and filling 
+another liter of hot.
 
 Trying to make this water gathering appear concurrent by filling smaller 
 quantities of water at a time and walking more is called "thrashing" if applied 
