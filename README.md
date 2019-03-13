@@ -95,7 +95,7 @@ Computing tasks might be too abstract for visualizing sequential and concurrent
 tasks. It's much easier to visualize steeping tea and boiling eggs concurrently, 
 but only after water has come to a boil.
 
-It might also be irresponsible to suggest running specific tasks concurrently, 
+It might also be irresponsible to suggest running certain tasks concurrently, 
 when concurrent operation would not be optimal for those tasks.
 
 First, we need to understand what "__parallel__", "__concurrent__", and 
