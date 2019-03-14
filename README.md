@@ -91,9 +91,9 @@ it or exit on it.
 
 ### Why the culinary task names?
 
-Computing tasks might be too abstract for visualizing sequential and concurrent 
-tasks. It's much easier to visualize steeping tea and boiling eggs concurrently, 
-but only after water has come to a boil.
+Computational tasks might be too abstract for visualizing sequences and 
+concurrency. It's much easier to visualize steeping tea and boiling eggs 
+concurrently, but only after water has come to a boil.
 
 It might also be irresponsible to suggest running certain tasks concurrently, 
 when concurrent operation would not be optimal for those tasks.
@@ -110,7 +110,7 @@ rapidly switching between the processes on one processor core.
 
 "__Asynchrony__" refers to when a process runs outside the main execution flow, 
 and the main execution might need a response. If it does, it must not block 
-other processes not dependent on the response while it waits.
+other processes, that don't depend on the response, while it waits.
 
 JavaScript, and Node.js in particular, are frequently referred to as being 
 "single-threaded". In recent years, this has become wholly untrue. If you are 
@@ -119,17 +119,17 @@ not sure why you're reading this, but thanks for checking out
 gulp4-run-sequence!
 
 Now consider a procedure found in nearly every gulp implementation: a file read. 
-It is not a good idea to run file reads concurrently on a single machine even if 
-it has many processor cores. You should assume the machine has a single disk 
-drive, and that the drive has a single read/write head. Even if those aren't the 
-case, you should assume there is only one pathway open at a given time on which 
-the data can travel from drive to memory.
+It is not a good idea to read files concurrently on a single machine, even if it 
+has many processor cores. You should assume the machine has a single disk drive, 
+and that the drive has a single read/write head. Even if those aren't the case, 
+you should assume there is only one pathway open at a given time on which the 
+data can travel from drive to memory.
 
 Let's make a culinary analogy: Assume you need 2 liters of warm water evenly 
 mixed from a cold faucet and a hot faucet. However, the cold and hot faucets 
 are 10 meters apart. Any rational person would mix the water sequentially, 
 filling a liter of cold water, walking the 10 meters, and filling another liter 
-of hot.
+of hot water.
 
 Trying to make this water gathering appear concurrent by filling smaller 
 quantities of water at a time and walking more is called "thrashing" if applied 
