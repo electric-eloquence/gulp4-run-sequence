@@ -132,7 +132,7 @@ cold water, walking the 10 meters, and filling another liter of hot water.
 
 Trying to make this water gathering appear concurrent by filling smaller 
 amounts of water at a time, and walking more, is called "thrashing" if applied 
-to a disk drive.
+to a disk drive!
 
 ### Acknowledgements
 
