@@ -116,7 +116,7 @@ JavaScript, and Node.js in particular, are frequently referred to as being
 "single-threaded". In recent years, this has become wholly untrue. If you are 
 working on production-level parallel JavaScript, firstly, kudos! Secondly, we're 
 not sure why you're reading this, but thanks for checking out 
-gulp4-run-sequence!
+`gulp4-run-sequence`!
 
 Now consider a procedure found in nearly every gulp implementation: a file read. 
 It is not a good idea to read files concurrently on a single machine, even if it 
@@ -132,7 +132,7 @@ filling a liter of cold water, walking the 10 meters, and filling another liter
 of hot water.
 
 Trying to make this water gathering appear concurrent by filling smaller 
-quantities of water at a time and walking more is called "thrashing" if applied 
+amounts of water at a time and walking more is called "thrashing" if applied 
 to a disk drive.
 
 ### Acknowledgements
