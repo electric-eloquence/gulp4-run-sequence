@@ -122,7 +122,7 @@ Now consider a procedure found in nearly every gulp implementation: a file read.
 It is not a good idea to read files concurrently on a single machine, even if it 
 has many processor cores. You should assume the machine has a single disk drive, 
 and that the drive has a single read/write head. Even if those aren't the case, 
-you should assume there is only one pathway open at a given time on which the 
+you should assume there is only one pathway, open at a given time, on which the 
 data can travel from drive to memory.
 
 Let's make a culinary analogy: Assume you need 2 liters of warm water evenly 
