@@ -7,8 +7,7 @@
 [![License][license-image]][license-url]
 
 Run a sequence of tasks, in the order you specify, as part of a greater task. 
-(This package particularly helps gulp tasks coded in gulp 3 syntax run in gulp 
-4.)
+(This package particularly helps tasks coded in gulp 3 syntax run in gulp 4.)
 
 ### Use
 
