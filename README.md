@@ -6,7 +6,8 @@
 [![Coverage Status][coveralls-image]][coveralls-url]
 [![License][license-image]][license-url]
 
-This package aims to help gulp tasks coded in gulp 3 syntax run in gulp 4.
+Run a sequence of tasks, in the order you specify, as part of a greater task. 
+(This package aims to help gulp tasks coded in gulp 3 syntax run in gulp 4.)
 
 ### Use
 
@@ -20,7 +21,7 @@ const fs = require('fs');
 // * 'steep-tea' and 'boil-egg' concurrently
 // * 'peel-egg'
 // * Finally, the callback function.
-gulp.task('build', function (callback) {
+gulp.task('breakfast', function (callback) {
   runSequence(
     'boil-water',
     ['steep-tea', 'boil-egg'],
