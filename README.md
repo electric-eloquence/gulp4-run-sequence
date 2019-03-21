@@ -106,7 +106,7 @@ First, we need to understand what "__parallel__", "__concurrent__", and
 "__Parallel__" computing refers to distributing processes across multiple 
 processor cores.
 
-"__Concurrent__" computing refers to running multiple processes in such a way 
+"__Concurrent__" computing refers to running multiple processes, in such a way, 
 that they appear to be running at the same time. This can be accomplished by 
 rapidly switching between the processes on one processor core.
 
