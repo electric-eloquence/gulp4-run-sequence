@@ -60,13 +60,13 @@ gulp.task('peel-egg', function (callback) {
 ### Use within gulp submodules
 
 If you have a complex gulp setup with your tasks split up across different 
-files, you may get the error that `gulp4-run-sequence` is unable to find your 
-tasks. In this case, you can configure `gulp4-run-sequence` to look at the gulp 
+files, you may get the error that gulp4-run-sequence is unable to find your 
+tasks. In this case, you can configure gulp4-run-sequence to look at the gulp 
 within the submodule, like so:
 
 ```javascript
 // Explicitly declare gulp particular to your submodule.
-const gulp = require('gulp');
+const gulp = require('./path/to/gulp');
 // Explicitly assign this gulp to gulp4-run-sequence.
 const runSequence = require('gulp4-run-sequence').use(gulp);
 
@@ -117,7 +117,7 @@ JavaScript, and Node.js in particular, are frequently referred to as being
 "single-threaded". In recent years, this has become wholly untrue. If you are 
 working on production-level parallel JavaScript, firstly, kudos! Secondly, we're 
 not sure why you're reading this, but thanks for checking out 
-`gulp4-run-sequence`!
+gulp4-run-sequence!
 
 Now consider a procedure found in nearly every gulp implementation: a file read. 
 It is not a good idea to read files concurrently on a single machine, even if it 
