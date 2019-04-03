@@ -127,9 +127,9 @@ you should assume there is only one pathway, open at a given time, on which the
 data can travel from drive to memory.
 
 Let's make a culinary analogy: Assume you need 2 liters of warm water evenly 
-mixed from a cold faucet and a hot faucet. However, the faucets are 10 meters 
-apart. Any rational person would mix the water sequentially, filling a liter of 
-cold water, walking the 10 meters, and filling another liter of hot water.
+mixed from a cold tap and a hot tap. However, the taps are 10 meters apart. Any 
+rational person would mix the water sequentially, filling a liter of cold water, 
+walking the 10 meters, and filling another liter of hot water.
 
 Trying to make this water gathering appear concurrent by filling smaller 
 amounts of water at a time, and walking more, is called "thrashing" if applied 
