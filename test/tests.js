@@ -420,4 +420,20 @@ describe('gulp4-run-sequence', function () {
     expect(testArr[2]).to.equal('parallel');
     expect(testArr[3]).to.equal('series');
   });
+
+  it('should append additional messaging to a "Task never defined" error', function (done) {
+    try {
+      runSequence(
+        'foo',
+        () => {}
+      );
+    }
+    catch (err) {
+      const addlMsg = 'If your code requires multiple gulp instances, you may want to consolidate them into one' +
+        ' instance. Otherwise, use require(\'gulp4-run-sequence\').use(gulp).';
+
+      expect(err.message).to.contain(addlMsg);
+      done();
+    }
+  });
 });
