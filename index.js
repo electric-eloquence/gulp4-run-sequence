@@ -42,8 +42,8 @@ function runSequence(gulp_) {
     // emits the error may change without warning. The only way to ensure its usefulness is to constantly test with the
     // latest dependencies.
     if (err.message.indexOf('Task never defined') === 0) {
-      err.message += '. If your code requires multiple gulp instances, you may want to consolidate them into one' +
-        ' instance. Otherwise, use require(\'gulp4-run-sequence\').use(gulp).';
+      err.message += '. If your code requires multiple gulp instances, try consolidating them into one instance.' +
+        ' Otherwise, try require(\'gulp4-run-sequence\').use(gulp).';
     }
 
     throw err;
