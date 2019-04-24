@@ -60,9 +60,9 @@ gulp.task('peel-egg', function (callback) {
 ### Use within gulp submodules
 
 If you have a complex gulp setup with your tasks split up across different 
-files, you may get the error that gulp4-run-sequence is unable to find your 
-tasks. In this case, you can configure gulp4-run-sequence to look at the gulp 
-within the submodule, like so:
+files, gulp4-run-sequence might not be able to find each task, and will error 
+that the task was never defined. In this case, you can configure 
+gulp4-run-sequence to look at the gulp within the submodule, like so:
 
 ```javascript
 // Explicitly declare gulp particular to your submodule.
