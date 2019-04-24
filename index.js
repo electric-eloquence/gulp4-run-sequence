@@ -32,9 +32,22 @@ function runSequence(gulp_) {
     }
   });
 
-  var toRunFn = gulp.series.apply(null, toRunArr);
+  try {
+    var toRunFn = gulp.series.apply(null, toRunArr);
 
-  toRunFn(cb);
+    toRunFn(cb);
+  }
+  catch (err) {
+    // This can be a very helpful error message, but the logic for catching it is brittle, because the dependency that
+    // emits the error may change without warning. The only way to ensure its usefulness is to constantly test with the
+    // latest dependencies.
+    if (err.message.indexOf('Task never defined') === 0) {
+      err.message += '. If your code requires multiple gulp instances, you may want to consolidate them into one' +
+        ' instance. Otherwise, use require(\'gulp4-run-sequence\').use(gulp).';
+    }
+
+    throw err;
+  }
 }
 
 module.exports = runSequence.bind(null, null);
