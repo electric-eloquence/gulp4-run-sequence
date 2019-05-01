@@ -40,7 +40,7 @@
     "chai": "4.x",
     "coveralls": "3.x",
     "eslint": "5.x",
-    "gulp": "^4.0.0",
+    "gulp": "4.x",
     "husky": "1.x",
     "mocha": "6.x",
     "nyc": "14.x"
