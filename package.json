@@ -1,6 +1,6 @@
 {
   "name": "gulp4-run-sequence",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Drop-in replacement for run-sequence for gulp 4",
   "main": "index.js",
   "scripts": {
