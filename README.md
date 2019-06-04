@@ -1,4 +1,4 @@
-# Drop-in replacement for run-sequence for gulp 4
+# Drop-in replacement for `run-sequence` for `gulp 4`
 
 [![Known Vulnerabilities][snyk-image]][snyk-url]
 [![Mac/Linux Build Status][travis-image]][travis-url]
@@ -7,7 +7,8 @@
 [![License][license-image]][license-url]
 
 Run a sequence of tasks, in the order you specify, as part of a greater task. 
-(This package particularly helps tasks coded in gulp 3 syntax run in gulp 4.)
+(This package aims to help tasks, formerly dependent on `run-sequence` for `gulp 
+3`, run in `gulp 4`.)
 
 ### Use
 
@@ -57,12 +58,12 @@ gulp.task('peel-egg', function (callback) {
 });
 ```
 
-### Use within gulp submodules
+### Use within `gulp` submodules
 
-If you have a complex gulp setup, with your tasks split up across different 
-files, gulp4-run-sequence might not be able to find every task, and will error 
+If you have a complex `gulp` setup, with your tasks split up across different 
+files, `gulp4-run-sequence` might not be able to find every task, and will error 
 that such tasks were never defined. In this case, you can configure 
-gulp4-run-sequence to look at the gulp within the submodule, like so:
+`gulp4-run-sequence` to look at the `gulp` within the submodule, like so:
 
 ```javascript
 // Explicitly declare gulp particular to your submodule.
@@ -78,10 +79,10 @@ gulp.task('supertask', function (callback) {
 
 ### Options
 
-The options in the gulp 3 version of run-sequence no longer apply. 
+The options in the `gulp 3` version of `run-sequence` no longer apply. 
 
 `showErrorStackTrace` no longer applies because errors are handled entirely 
-within the gulp 4 stack. A good command of streams, promises, and callback 
+within the `gulp 4` stack. A good command of streams, promises, and callback 
 functions will deliver the desired amount of error verbosity.
 
 `ignoreUndefinedTasks` no longer applies because all falsey arguments will be 
@@ -117,14 +118,14 @@ JavaScript, and Node.js in particular, are frequently referred to as being
 "single-threaded". In recent years, this has become wholly untrue. If you are 
 working on production-level parallel JavaScript, firstly, kudos! Secondly, we're 
 not sure why you're reading this, but thanks for checking out 
-gulp4-run-sequence!
+`gulp4-run-sequence`!
 
-Now consider a procedure found in nearly every gulp implementation: a file read. 
-It is not a good idea to read files concurrently on a single machine, even if it 
-has many processor cores. We should assume the machine has a single disk drive, 
-and that the drive has a single read/write head. Even if those aren't the case, 
-we should assume there is only one pathway, open at a given time, on which the 
-data can travel from drive to memory.
+Now consider a procedure found in nearly every `gulp` implementation: a file 
+read. It is not a good idea to read files concurrently on a single machine, even 
+if it has many processor cores. We should assume the machine has a single disk 
+drive, and that the drive has a single read/write head. Even if those aren't the 
+case, we should assume there is only one pathway, open at a given time, on which 
+the data can travel from drive to memory.
 
 Let's make a culinary analogy: Assume we need 2 liters of warm water evenly 
 mixed from a cold tap and a hot tap. However, the taps are 10 meters apart. Any 
@@ -138,11 +139,11 @@ to a disk drive!
 ### Acknowledgements
 
 This package is inspired entirely by 
-[run-sequence](https://github.com/OverZealous/run-sequence) for gulp 3. Credit 
-and gratitude are due for 
+[`run-sequence`](https://github.com/OverZealous/run-sequence) for `gulp 3`. 
+Credit and gratitude are due for 
 [its contributors](https://github.com/OverZealous/run-sequence/graphs/contributors). 
 
-#### Also recommended: [gulp 3 with long-term support](https://github.com/electric-eloquence/gulp)
+#### Also recommended: [`gulp 3` with long-term support](https://github.com/electric-eloquence/gulp)
 
 [snyk-image]: https://snyk.io/test/github/electric-eloquence/gulp4-run-sequence/master/badge.svg
 [snyk-url]: https://snyk.io/test/github/electric-eloquence/gulp4-run-sequence/master
