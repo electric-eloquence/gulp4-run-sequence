@@ -117,6 +117,93 @@ describe('gulp4-run-sequence', function () {
     });
   });
 
+  it('should accept strings as tasks', function (done) {
+    gulp.task('subTask', function (cb) {
+      cb();
+    });
+
+    gulp.task('strTask', function (cb) {
+      runSequence(
+        'subTask',
+        cb
+      );
+    });
+
+    gulp.series('strTask')(function () {
+      done();
+    });
+  });
+
+  it('should accept functions as tasks', function (done) {
+    function fnTask(cb) {
+      cb();
+    }
+
+    gulp.task('fnTask', function (cb) {
+      runSequence(
+        fnTask,
+        cb
+      );
+    });
+
+    gulp.series('fnTask')(function () {
+      done();
+    });
+  });
+
+  it('should accept arrays of tasks', function (done) {
+    gulp.task('subTask0', function (cb) {
+      cb();
+    });
+
+    function subTask1(cb) {
+      cb();
+    }
+
+    gulp.task('arrTask', function (cb) {
+      runSequence(
+        ['subTask0', subTask1],
+        cb
+      );
+    });
+
+    gulp.series('arrTask')(function () {
+      done();
+    });
+  });
+
+  it('should error on wrongly typed tasks if configured to do so', function (done) {
+    runSequence.options.errorOnInvalidArgumentType = true;
+
+    try {
+      runSequence(
+        null,
+        () => {}
+      );
+    }
+    catch (err) {
+      expect(err.message).to.equal('gulp4-run-sequence expects its arguments to be strings, arrays, or functions.');
+      expect(err.code).to.equal('EINVAL');
+
+      delete runSequence.options.errorOnInvalidArgumentType;
+      done();
+    }
+  });
+
+  it('should not error on wrongly typed tasks if not configured to do so', function (done) {
+    gulp.task('skipNullTask', function (cb) {
+      runSequence(
+        callback => callback(),
+        null,
+        cb
+      );
+    });
+
+    gulp.series('skipNullTask')(function () {
+      done();
+    });
+  });
+
   it('should run callback tasks in series', function (done) {
     gulp.task('seriesCallbacks', function (cb) {
       runSequence(
@@ -151,26 +238,6 @@ describe('gulp4-run-sequence', function () {
       expect(toastBreadStop).to.be.a('number');
       expect(boilWaterStart).to.be.below(toastBreadStop);
       expect(toastBreadStart).to.be.below(boilWaterStop);
-      done();
-    });
-  });
-
-  it('should allow null tasks', function (done) {
-    gulp.task('nullTask', function (cb) {
-      runSequence(
-        'boilWater',
-        null,
-        'steepTea',
-        cb
-      );
-    });
-
-    gulp.series('nullTask')(function () {
-      expect(boilWaterStart).to.be.a('number');
-      expect(boilWaterStop).to.be.a('number');
-      expect(steepTeaStart).to.be.a('number');
-      expect(steepTeaStop).to.be.a('number');
-      expect(steepTeaStart).to.not.be.below(boilWaterStop);
       done();
     });
   });

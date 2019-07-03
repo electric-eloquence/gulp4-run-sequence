@@ -1,5 +1,12 @@
 'use strict';
 
+function invalidArgumentTypeError() {
+  TypeError.call(this);
+
+  this.message = 'gulp4-run-sequence expects its arguments to be strings, arrays, or functions.';
+  this.code = 'EINVAL';
+}
+
 function runSequence(gulp_) {
   var argsArr = [];
   var cb;
@@ -9,7 +16,7 @@ function runSequence(gulp_) {
     argsArr[i] = arguments[i];
   }
 
-  var toRunArr = argsArr.filter(function (task) {
+  var toRunArr = argsArr.filter(function (task, index) {
     if (typeof task === 'string') {
       return true;
     }
@@ -17,18 +24,33 @@ function runSequence(gulp_) {
       return true;
     }
     else if (typeof task === 'function') {
-      cb = task;
-      return false;
+      if (index === argsArr.length - 1) {
+        cb = task;
+
+        return false;
+      }
+      else {
+        return true;
+      }
     }
     else {
+      if (module.exports.options.errorOnInvalidArgumentType) {
+        throw new invalidArgumentTypeError();
+      }
+
       return false;
     }
-  }).map(function (task) {
+  }).map(function (task, index) {
     if (typeof task === 'string') {
       return task;
     }
     else if (Array.isArray(task)) {
       return gulp.parallel.apply(null, task);
+    }
+    else if (typeof task === 'function') {
+      if (index < argsArr.length - 1) {
+        return task;
+      }
     }
   });
 
