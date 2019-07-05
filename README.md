@@ -80,8 +80,8 @@ gulp.task('supertask', function (callback) {
 ### Options
 
 `errorOnInvalidArgumentType`: Set this to true in order to throw an error if an 
-invalid argument type has been submitted. The only acceptable argument types are 
-string, array, and function.
+invalid argument type has been passed. The only valid argument types are string, 
+array, and function.
 
 Example:
 
@@ -90,7 +90,7 @@ runSequence.options.errorOnInvalidArgumentType = true;
 
 gulp.task('task', function(cb) {
   // null is neither string, array, nor function, so this will error:
-  runSequence('foo', null, 'bar');
+  runSequence('foo', null, 'bar', cb);
 });
 ```
 
@@ -100,8 +100,8 @@ The options in the `gulp 3` version of `run-sequence` no longer apply.
 within the `gulp 4` stack. A good command of streams, promises, and callback 
 functions will deliver the desired amount of error verbosity.
 
-`ignoreUndefinedTasks` no longer applies because all falsey arguments will 
-either be skipped without warning (default behavior), or result in error if 
+`ignoreUndefinedTasks` no longer applies because falsey arguments will either be 
+skipped without warning (default behavior), or cause an error if 
 `errorOnInvalidArgumentType` is set to `true`. 
 
 ### Why the culinary task names?
