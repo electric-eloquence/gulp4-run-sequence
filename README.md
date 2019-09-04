@@ -100,7 +100,7 @@ The options in the `gulp 3` version of `run-sequence` no longer apply.
 within the `gulp 4` stack. A good command of streams, promises, and callback 
 functions will deliver the desired amount of error verbosity.
 
-`ignoreUndefinedTasks` no longer applies because falsey arguments will either be 
+`ignoreUndefinedTasks` no longer applies because falsy arguments will either be 
 skipped without warning (default behavior), or cause an error if 
 `errorOnInvalidArgumentType` is set to `true`. 
 
