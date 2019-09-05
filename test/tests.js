@@ -499,7 +499,7 @@ describe('gulp4-run-sequence', function () {
       const addlMsg = 'If your code requires multiple gulp instances, try consolidating them into one instance.'
         + ' Otherwise, try require(\'gulp4-run-sequence\').use(gulp).';
 
-      expect(err.message).to.contain(addlMsg);
+      expect(err.message).to.have.string(addlMsg);
       done();
     }
   });
