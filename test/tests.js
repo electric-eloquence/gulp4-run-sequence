@@ -117,7 +117,7 @@ describe('gulp4-run-sequence', function () {
     });
   });
 
-  it('should accept strings as tasks', function (done) {
+  it('accepts strings as tasks', function (done) {
     gulp.task('subTask', function (cb) {
       cb();
     });
@@ -134,7 +134,7 @@ describe('gulp4-run-sequence', function () {
     });
   });
 
-  it('should accept functions as tasks', function (done) {
+  it('accepts functions as tasks', function (done) {
     function fnTask(cb) {
       cb();
     }
@@ -151,7 +151,7 @@ describe('gulp4-run-sequence', function () {
     });
   });
 
-  it('should accept arrays of tasks', function (done) {
+  it('accepts arrays of tasks', function (done) {
     gulp.task('subTask0', function (cb) {
       cb();
     });
@@ -172,7 +172,7 @@ describe('gulp4-run-sequence', function () {
     });
   });
 
-  it('should error on wrongly typed tasks if configured to do so', function (done) {
+  it('errors on wrongly typed tasks if configured to do so', function (done) {
     runSequence.options.errorOnInvalidArgumentType = true;
 
     try {
@@ -190,7 +190,7 @@ describe('gulp4-run-sequence', function () {
     }
   });
 
-  it('should not error on wrongly typed tasks if not configured to do so', function (done) {
+  it('does not error on wrongly typed tasks if not configured to do so', function (done) {
     gulp.task('skipNullTask', function (cb) {
       runSequence(
         callback => callback(),
@@ -204,7 +204,7 @@ describe('gulp4-run-sequence', function () {
     });
   });
 
-  it('should run callback tasks in series', function (done) {
+  it('runs callback tasks in series', function (done) {
     gulp.task('seriesCallbacks', function (cb) {
       runSequence(
         'boilWater',
@@ -223,7 +223,7 @@ describe('gulp4-run-sequence', function () {
     });
   });
 
-  it('should run callback tasks in parallel', function (done) {
+  it('runs callback tasks in parallel', function (done) {
     gulp.task('parallelCallbacks', function (cb) {
       runSequence(
         ['boilWater', 'toastBread'],
@@ -242,7 +242,7 @@ describe('gulp4-run-sequence', function () {
     });
   });
 
-  it('should run a serial task, then two parallel tasks', function (done) {
+  it('runs a serial task, then two parallel tasks', function (done) {
     gulp.task('serialThenTwoParallel', function (cb) {
       runSequence(
         'boilWater',
@@ -268,7 +268,7 @@ describe('gulp4-run-sequence', function () {
     });
   });
 
-  it('should run two parallel tasks, then a serial task', function (done) {
+  it('runs two parallel tasks, then a serial task', function (done) {
     gulp.task('twoParallelThenSerial', function (cb) {
       runSequence(
         ['steepTea', 'boilEgg'],
@@ -294,7 +294,7 @@ describe('gulp4-run-sequence', function () {
     });
   });
 
-  it('should run a serial task, then two parallel tasks, then a serial task', function (done) {
+  it('runs a serial task, then two parallel tasks, then a serial task', function (done) {
     gulp.task('serialThenTwoParallelThenSerial', function (cb) {
       runSequence(
         'boilEgg',
@@ -327,7 +327,7 @@ describe('gulp4-run-sequence', function () {
     });
   });
 
-  it('should run stream tasks in series', function (done) {
+  it('runs stream tasks in series', function (done) {
     gulp.task('seriesStream0', function () {
       return gulp.src(path.join(srcDir, 'foo.txt'))
         .pipe(gulp.dest(seriesDir));
@@ -356,7 +356,7 @@ describe('gulp4-run-sequence', function () {
     });
   });
 
-  it('should run stream tasks in parallel', function (done) {
+  it('runs stream tasks in parallel', function (done) {
     let stop0;
     let start1;
 
@@ -398,7 +398,7 @@ describe('gulp4-run-sequence', function () {
     });
   });
 
-  it('should run promise tasks in series', function (done) {
+  it('runs promise tasks in series', function (done) {
     let a = '';
     let b = '0';
     let c = '1';
@@ -438,7 +438,7 @@ describe('gulp4-run-sequence', function () {
     });
   });
 
-  it('should run promise tasks in parallel', function (done) {
+  it('runs promise tasks in parallel', function (done) {
     let stop0;
     let start1;
 
@@ -471,7 +471,7 @@ describe('gulp4-run-sequence', function () {
     });
   });
 
-  it('should use an explicitly assigned gulp object', function () {
+  it('uses an explicitly assigned gulp object', function () {
     const cb = () => {};
     const testArr = ['steepTea', 'boilEgg'];
     const gulpMock = {
@@ -488,7 +488,7 @@ describe('gulp4-run-sequence', function () {
     expect(testArr[3]).to.equal('series');
   });
 
-  it('should append additional messaging to a "Task never defined" error', function (done) {
+  it('appends additional messaging to a "Task never defined" error', function (done) {
     try {
       runSequence(
         'foo',
