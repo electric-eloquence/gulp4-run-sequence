@@ -125,7 +125,7 @@ rapidly switching between the processes on one processor core.
 
 "__Asynchrony__" refers to when a process runs outside the main execution flow, 
 and the main execution might need a response. If it does, it must not block 
-other processes, that don't depend on the response, while it waits.
+other processes that don't depend on the response, while it waits.
 
 JavaScript, and Node.js in particular, are frequently referred to as being 
 "single-threaded". In recent years, this has become wholly untrue. If you are 
