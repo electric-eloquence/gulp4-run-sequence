@@ -41,8 +41,8 @@
     "coveralls": "3.x",
     "eslint": "6.x",
     "gulp": "4.x",
-    "husky": "1.x",
-    "mocha": "6.x",
-    "nyc": "14.x"
+    "husky": "4.x",
+    "mocha": "7.x",
+    "nyc": "15.x"
   }
 }
