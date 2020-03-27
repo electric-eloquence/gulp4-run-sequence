@@ -27,7 +27,7 @@ jobs:
 
       - name: Build
         run: |
-          npm ci
+          npm install
           npm test
           npx nyc report --reporter=text-lcov > ./lcov.info
 
