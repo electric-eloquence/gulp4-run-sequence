@@ -89,7 +89,7 @@ Example:
 ```javascript
 runSequence.options.errorOnInvalidArgumentType = true;
 
-gulp.task('task', function(cb) {
+gulp.task('task', function (cb) {
   // null is neither string, array, nor function, so this will error:
   runSequence('foo', null, 'bar', cb);
 });
